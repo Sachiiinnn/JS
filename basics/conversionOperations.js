@@ -3,9 +3,9 @@
 // let score = undefined;
 // let score = true; // boolean
 let score = "Sachin"; // string
-console.log(typeof score); // number
+console.log(typeof score); // string
 let valueInNumber = Number(score);
-console.log(typeof valueInNumber); // string
+console.log(typeof valueInNumber); // number
 console.log(valueInNumber); // NaN (Not a Number)
 // "33" => 33
 // "33abc" => NaN
