@@ -101,9 +101,40 @@ const users =[
     }
 ]
 
-console.log(users[1].email);
+// console.log(users[1].email);
 
-console.log(Object.keys(tinderUser)); // returns keys of the object
-console.log(Object.values(tinderUser)); // returns values of the object 
-console.log(Object.entries(tinderUser)); // returns key-value pairs of the object as an array
-console.log(Object.hasOwn(tinderUser, "isLoggedIn")); // checks if the object has the
+// console.log(Object.keys(tinderUser)); // returns keys of the object
+// console.log(Object.values(tinderUser)); // returns values of the object 
+// console.log(Object.entries(tinderUser)); // returns key-value pairs of the object as an array
+// console.log(Object.hasOwn(tinderUser, "isLoggedIn")); // checks if the object has the
+
+const course = {
+    courseName: "JavaScript",
+    price : 199,
+    courseInstructor: "John Doe",
+}
+
+//course.courseInstructor
+
+const {courseInstructor : ins} = course; // destructuring assignment
+
+// console.log(courseInstructor); // John Doe
+console.log(ins); // John Doe
+
+const navbar = ({company}) => {
+
+}
+navbar(company = "Google") // function with default parameter
+
+// {
+//     "name" : "Sachin",
+//     "courseName": "JavaScript",
+//     "price" : 199,
+// } //JSON object
+
+[
+    {
+    },
+    {}
+]
+
