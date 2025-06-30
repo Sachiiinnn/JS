@@ -42,7 +42,7 @@ const user ={
 
 // const addTwo = (num1, num2) => num1 + num2;
 // const addTwo = (num1, num2) => (num1 + num2);// in parantheisis() return not required  
-const addTwo = (num1, num2) => ({username : "Sachin"})
+const addTwo = (num1, num2) => ({username : "Sachin"}) //{} using curly need return keyword
 
 console.log(addTwo(1,2));
 
