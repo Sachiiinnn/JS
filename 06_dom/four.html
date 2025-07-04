@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const list = document.createElement('li');
+        list.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(list)
+    }
+    addLang("Python")
+    addLang("TypeScript")
+
+    function addOpLang(langName){
+        const list = document.createElement('li');
+        list.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(list);
+    }
+    addOpLang("Ruby");
+
+    //edit 
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "CPP" not optimised
+
+    const newLI = document.createElement('li')
+    // newLI.textContent = "CPP";
+    newLI.appendChild(document.createTextNode("CPP"))
+    secondLang.replaceWith(newLI)
+
+    //edit 
+    const first = document.querySelector("li:first-child");
+    // const Li = document.createElement('li');
+    // Li.appendChild(document.createTextNode("TypeScript"));
+    // first.replaceWith(Li)
+    first.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+
+    const last = document.querySelector('li:last-child')
+    last.remove();
+</script>
+</html>
