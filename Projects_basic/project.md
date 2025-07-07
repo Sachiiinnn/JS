@@ -69,7 +69,7 @@ form.addEventListener('submit', function(event){
 })
 ```
 
-## Project 3 : Project Code
+## Project 3 : Digital Clock
 
 ```javascript
 const clock = document.querySelector('#clock');
