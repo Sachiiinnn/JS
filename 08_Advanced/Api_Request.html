@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+<div class="card" style="width: 200px; height: 250px;">
+    <img src="" alt="" style="width: 200px; height: 200px;">
+    <div class="details" style="padding: 2px 16px;">
+        <h2 style="font-size: medium;"></h2>
+        <h4></h4>
+        <p></p>
+        <button id="Start">Start</button>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    const url = 'https://api.github.com/users/Sachiiinnn';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText);
+            console.log( data);
+            console.log(data.followers);
+            
+            document.querySelector('#Start').addEventListener('click', function(){
+                document.querySelector('.card img').setAttribute("src", `${data.avatar_url}`)
+                document.querySelector('h2').innerHTML = `${data.name} `
+                document.querySelector('h4').innerHTML = ` Followers : ${data.followers}`
+                document.querySelector('p').innerHTML = `${data.user_view_type}`
+            })
+        }
+    }
+
+    xhr.send();
+</script>
+</html>
