@@ -1,15 +1,49 @@
-.container{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     flex-direction: column;
     height: 100vh;
+    background: linear-gradient(to right, #1e252b, #0d1215);
 }
-#clock{
-    font-size: 30px;
-    background-color: blueviolet;
-    padding: 25px 60px;
-    margin-top: 10px;
-    border-radius: 10px;
-    color: whitesmoke;
-}
+#clock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .timebox {
+      background-color: #fff;
+      padding: 20px 30px;
+      margin: 0 5px;
+      border-radius: 10px;
+      min-width: 70px;
+    }
+
+    #ampm {
+      font-size: 50px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 100;
+    }
+
+    span {
+      font-size: 2rem;
+      margin: 0 5px;
+    }
+
+      .container {
+      text-align: center;
+      background-color: #ffffff7f;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #banner{
+      margin-bottom: 20px;
+    }
+
