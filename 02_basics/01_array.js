@@ -1,5 +1,5 @@
 //array
-//shllow copy(reference as in stack memory) not deep copy(no reference)
+//shallow copy(reference as in stack memory) not deep copy(no reference)
 const myArr =[0,1,2,3,4,5];
 
 const arr = new Array(1, 2, 3, 4, 5);
